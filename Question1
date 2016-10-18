@@ -1,0 +1,10 @@
+read -p "Please insert a number: " numNum
+n=0
+while (( $n < 1 ))
+do
+case $numNum in
+*[!0-9]*) read -p "Error! Please insert a number: " numNum;;
+*) n=1;;
+esac
+done
+echo $numNum
